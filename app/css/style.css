@@ -1,0 +1,75 @@
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #1d1d1d;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(178,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23000000'/%3E%3Cstop offset='1' stop-color='%233b0e36'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='4' height='4' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%231d1d1d' cx='2' cy='2' r='2'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.13'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section {
+  height: 100%;
+}
+ 
+.titlebar {
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  position: fixed;
+  width: 100%;
+  height: 32px; /* Titlebar height */
+  top: 0;
+  z-index: 2;
+}
+
+.title {
+  position: fixed;
+  top: 6px;
+  left: 6px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.titlebar-controls {
+  -webkit-app-region: no-drag;
+  -webkit-user-select: none;
+  position: fixed;
+  top: 6px;
+  right: 6px;
+}
+
+.container {
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.scrollable {
+  overflow: auto;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fafafa;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+.select-dropdown {
+  color: #fcfcfc;
+}

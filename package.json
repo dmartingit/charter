@@ -1,0 +1,62 @@
+{
+  "name": "charter",
+	"productName": "Charter",
+  "version": "1.0.0",
+  "description": "DDP-Charts in a much cleaner form and with some additional features.",
+  "main": "main.js",
+  "scripts": {
+    "dist:win32": "electron-builder -w --ia32 --config.nsis.artifactName=\"${productName} ${version} Setup x32.${ext}\" --config.portable.artifactName=\"${productName} ${version} x32.${ext}\"",
+    "dist:win64": "electron-builder -w --x64",
+    "dist:linux": "electron-builder -l",
+    "dist:macOS": "electron-builder -m",
+    "pack": "electron-builder --dir",
+    "start": "ELECTRON_ENV=development electron ."
+  },
+  "author": "Snewy",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "^4.0.4",
+    "electron-builder": "^20.38.5",
+    "electron-reload": "^1.4.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "build": {
+		"appId": "charter",
+		"productName": "Charter",
+		"linux": {
+			"target": [
+				{
+					"target": "AppImage",
+					"arch": [
+						"x64",
+						"ia32"
+					]
+				}
+			],
+			"category": "AudioVideo;Audio"
+		},
+		"mac": {
+			"category": "public.app-category.music"
+		},
+		"win": {
+			"target": [
+				"nsis",
+				"portable"
+			]
+		},
+		"nsis": {
+			"artifactName": "${productName} ${version} Setup.${ext}",
+			"oneClick": false,
+			"license": "LICENSE",
+			"allowToChangeInstallationDirectory": true,
+			"uninstallDisplayName": "${productName} ${version}",
+			"deleteAppDataOnUninstall": true
+		},
+		"portable": {
+			"artifactName": "${productName} ${version}.${ext}",
+			"requestExecutionLevel": "user"
+		}
+	}
+}

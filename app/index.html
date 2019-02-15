@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Charter</title>
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="fonts/roboto/Roboto-Regular.woff">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/materialicons.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="titlebar grey-text text-lighten-5">
+        <div class="title">Charter</div>
+        <div class="titlebar-controls">
+          <i class="material-icons" id="minimizeBtn">remove</i>
+          <i class="material-icons" id="maximizeBtn">add</i>
+          <i class="material-icons" id="closeBtn">clear</i>
+        </div>
+      </div>
+    </header>
+    <section class="grey-text text-lighten-5">
+      <div class="container">
+        <div class="row">
+          <div class="col s8">
+            <select id="chartSelector">
+              <option value="" disabled selected>Select...</option>
+              <option value="1">Top 100</option>
+              <option value="2">Newcomer</option>
+              <option value="3">Reentries</option>
+            </select>
+          </div>
+          <div class="col s4">
+            <button type="button" class="btn waves-effect waves-light" id="loadBtn">Load</button>
+            <button type="button" class="btn waves-effect waves-light" id="saveBtn">Save</button>
+          </div>
+        </div>
+        <div class="scrollable">
+          <table class="highlight" id="tracksTable">
+            <thead>
+              <tr>
+                  <th>#</th>
+                  <th>Interpret</th>
+                  <th>Title</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <div class="center-align hide" id="preloader">
+            <br />
+            <div class="preloader-wrapper big active">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JS  -->
+    <script src="js/materialize.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
