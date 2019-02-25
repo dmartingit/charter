@@ -16,7 +16,6 @@ To build the app for other OSs follow the table below
 | OS                 | Command              |
 | ------------------ | -------------------- |
 | Windows x64        | `npm run dist:win64` |
-| Windows x32 or x86 | `npm run dist:win32` |
 | Linux              | `npm run dist:linux` |
 | macOS              | `npm run dist:macOS` |
 
